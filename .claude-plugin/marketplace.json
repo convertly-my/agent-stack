@@ -1,0 +1,26 @@
+{
+  "name": "convertly",
+  "owner": {
+    "name": "Convertly",
+    "url": "https://convertly.my"
+  },
+  "description": "Convertly plugins for planning, creating, storing, and publishing Meta ads.",
+  "version": "0.1.2",
+  "plugins": [
+    {
+      "name": "convertly-agent-stack",
+      "displayName": "Convertly Agent Stack",
+      "source": "./plugins/convertly-agent-stack",
+      "description": "Combine Convertly intelligence, image generation, Cloudinary assets, and Meta Ads publishing.",
+      "version": "0.1.2",
+      "author": {
+        "name": "Convertly",
+        "url": "https://convertly.my"
+      },
+      "homepage": "https://convertly.my",
+      "repository": "https://convertly.my/agent-stack.git",
+      "category": "marketing",
+      "tags": ["convertly", "meta-ads", "cloudinary", "advertising"]
+    }
+  ]
+}

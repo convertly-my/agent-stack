@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "convertly": {
+      "type": "http",
+      "url": "https://convertly.my/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${CONVERTLY_MCP_KEY}"
+      }
+    },
+    "meta-ads": {
+      "type": "http",
+      "url": "https://mcp.facebook.com/ads"
+    },
+    "cloudinary-asset-mgmt": {
+      "type": "http",
+      "url": "https://asset-management.mcp.cloudinary.com/mcp"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "convertly-agent-stack",
+  "version": "0.1.2",
+  "description": "Plan, create, store, and publish Meta ads with Convertly merchant intelligence.",
+  "author": {
+    "name": "Convertly",
+    "url": "https://convertly.my"
+  },
+  "homepage": "https://convertly.my",
+  "repository": "https://convertly.my/agent-stack.git",
+  "license": "UNLICENSED",
+  "keywords": ["convertly", "meta-ads", "cloudinary", "advertising", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": "./claude.mcp.json"
+}

@@ -1,0 +1,26 @@
+interface:
+  display_name: "Convertly Ad Operator"
+  short_description: "Build and launch ads from Convertly intelligence"
+  brand_color: "#635BFF"
+  default_prompt: "Use $convertly-ad-operator to analyze my funnel and prepare a paused Meta campaign."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "convertly"
+      description: "Convertly merchant intelligence"
+      transport: "streamable_http"
+      url: "https://convertly.my/api/mcp"
+    - type: "mcp"
+      value: "meta_ads"
+      description: "Official Meta Ads execution tools"
+      transport: "streamable_http"
+      url: "https://mcp.facebook.com/ads"
+    - type: "mcp"
+      value: "cloudinary_assets"
+      description: "Official Cloudinary asset management"
+      transport: "streamable_http"
+      url: "https://asset-management.mcp.cloudinary.com/mcp"
+
+policy:
+  allow_implicit_invocation: true
