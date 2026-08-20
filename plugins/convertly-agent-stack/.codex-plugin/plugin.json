@@ -1,7 +1,7 @@
 {
   "name": "convertly-agent-stack",
-  "version": "0.1.3",
-  "description": "Plan, create, store, and publish Meta ads with Convertly merchant intelligence.",
+  "version": "0.2.0",
+  "description": "Run a governed Growth OS for Meta campaigns using Convertly intelligence, experiments, creative memory, and scale readiness.",
   "author": {
     "name": "Convertly",
     "url": "https://convertly.my"
@@ -13,15 +13,16 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Convertly Agent Stack",
-    "shortDescription": "Turn Convertly data into ready-to-launch Meta ads.",
-    "longDescription": "Combines Convertly analytics, native image generation, Cloudinary asset management, and official Meta Ads publishing in one governed workflow.",
+    "shortDescription": "Build, test, and scale ads with Convertly Growth OS.",
+    "longDescription": "Combines Convertly analytics, experiments, creative memory, guarded scaling, native image generation, Cloudinary assets, and official Meta Ads publishing in one governed workflow.",
     "developerName": "Convertly",
     "category": "Marketing",
     "capabilities": ["Read", "Write"],
     "defaultPrompt": [
       "Analyze my funnel and draft a paused Meta campaign.",
       "Create three ad angles from my top sales page.",
-      "Diagnose weak ads and propose the next test."
+      "Diagnose weak ads and propose the next controlled test.",
+      "Evaluate which campaign is safe to scale and show the approval packet."
     ],
     "brandColor": "#635BFF"
   },

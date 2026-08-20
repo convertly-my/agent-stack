@@ -5,7 +5,7 @@ Claude Code:
 
 | Layer | Responsibility |
 | --- | --- |
-| Convertly MCP | Salespage, TC, Untung, Daily, Doctor, and Attribution intelligence |
+| Convertly MCP | Salespage, TC, Untung, Daily, Doctor, Attribution, experiments, creative intelligence, and scale readiness |
 | Agent image generation | Create ad images when the current agent supports native image generation |
 | Cloudinary Asset Management MCP | Upload and manage approved media assets |
 | Official Meta Ads MCP | Inspect and create campaign, ad set, creative, and ad objects |
@@ -61,7 +61,9 @@ After setup, paste one of these into the agent chat:
 
 ## Authentication
 
-Set `CONVERTLY_MCP_KEY` to the plaintext `mcp:read` key generated in Convertly.
+Set `CONVERTLY_MCP_KEY` to the plaintext MCP key generated in Convertly. New
+admin keys include `mcp:read` and `mcp:write`; the write scope stores only
+Growth OS hypotheses, feedback, and experiments and cannot publish to Meta.
 Never place the key in a committed file. Meta Ads and Cloudinary use their own
 OAuth approval flows after the plugin is enabled.
 
@@ -78,3 +80,9 @@ must return a production-ready prompt and stop before the asset-upload step.
 - Starting spend, raising budget, changing delivery, or activating ads requires
   explicit confirmation immediately before the action.
 - Every completed external action must be backed by returned asset or Meta IDs.
+
+## Growth OS prompts
+
+- List my available Convertly growth playbooks and recommend one from current evidence. Do not publish.
+- Build a controlled CTA test and record its hypothesis and experiment.
+- Evaluate which campaign is safe to scale using delivered TrueProfit, customer outcome, stock, creative depth, cooldown, and my budget constitution.
