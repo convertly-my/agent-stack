@@ -16,9 +16,12 @@ configuration shapes, while sharing the same orchestration skill.
 
 ## Install in Codex
 
-Set `CONVERTLY_MCP_KEY` in the user's environment, then run:
+For Windows beginners, paste this entire block into PowerShell, not into Codex
+chat. Replace `YOUR_MCP_KEY` first:
 
-```bash
+```powershell
+[Environment]::SetEnvironmentVariable("CONVERTLY_MCP_KEY", "YOUR_MCP_KEY", "User")
+
 codex plugin marketplace add https://convertly.my/agent-stack.git --sparse .agents --sparse plugins/convertly-agent-stack
 codex plugin add convertly-agent-stack@convertly
 ```
@@ -28,9 +31,12 @@ a new task so the installed skill and MCP tools are loaded.
 
 ## Install in Claude Code
 
-Set `CONVERTLY_MCP_KEY` in the user's environment, then run:
+For Windows beginners, paste this entire block into PowerShell, not into Claude
+chat. Replace `YOUR_MCP_KEY` first:
 
-```bash
+```powershell
+[Environment]::SetEnvironmentVariable("CONVERTLY_MCP_KEY", "YOUR_MCP_KEY", "User")
+
 claude plugin marketplace add https://convertly.my/agent-stack.git --sparse .claude-plugin plugins/convertly-agent-stack
 claude plugin install convertly-agent-stack@convertly
 ```
@@ -41,6 +47,17 @@ connections. The orchestration skill is available as
 
 Cursor and generic MCP clients do not share the Codex/Claude plugin format. Use
 the manual three-server configuration shown in Convertly for those clients.
+
+## First prompts
+
+After setup, paste one of these into the agent chat:
+
+- Review my Convertly data for the last 7 days and explain the biggest problem
+  in simple language.
+- Create three ad angles based on my best Convertly sales page. Do not publish
+  anything yet.
+- Prepare a paused Meta campaign from the best angle. Ask me before activating
+  or spending.
 
 ## Authentication
 
