@@ -16,6 +16,9 @@ Use each system for its owned responsibility:
 
 1. Identify the intended Convertly sales page and reporting window. Ask only when the choice cannot be inferred safely.
 2. Gather the relevant sales-page context, TC overview, profit, attribution, and Doctor diagnoses. Do not call every tool when a narrower request needs less data.
+   - Check `trueconvert.state` on every TC-dependent response before interpreting metrics.
+   - `not_configured` means TC tracking is not enabled. `no_data` means it is enabled but the request returned no matching data. Neither state means zero performance.
+   - In either fallback state, disclose the limitation briefly and continue with sales-page context, copy, creative, and paused Meta campaign planning. Do not invent profit, attribution, visitor, or Doctor conclusions.
 3. Build the campaign brief with objective, audience hypothesis, offer, angles, copy variants, creative specifications, destination, tracking, budget guardrails, and success criteria.
 4. When an image is requested, use the agent's native image-generation capability if available. If it is unavailable, provide a production-ready image prompt and clearly say that no image was generated.
 5. Upload only approved final assets to Cloudinary. Keep the returned secure URL and public ID for the Meta creative step.
