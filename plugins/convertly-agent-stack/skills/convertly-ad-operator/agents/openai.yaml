@@ -1,8 +1,8 @@
 interface:
   display_name: "Convertly Ad Operator"
-  short_description: "Build, test, and scale ads with Convertly Growth OS"
+  short_description: "Turn Convertly evidence into stronger ads"
   brand_color: "#635BFF"
-  default_prompt: "Use $convertly-ad-operator to analyze my funnel, create one controlled experiment, and prepare a paused Meta campaign."
+  default_prompt: "Use $convertly-ad-operator to find my biggest growth constraint, build one controlled experiment, and prepare a paused Meta campaign."
 
 dependencies:
   tools:

@@ -1,7 +1,7 @@
 {
   "name": "convertly-agent-stack",
-  "version": "0.3.0+codex.20260821081805",
-  "description": "Control a governed Meta Growth OS entirely from your agent using Convertly intelligence and official execution MCPs.",
+  "version": "0.4.0",
+  "description": "Connect ChatGPT or any MCP-compatible agent to TrueConvert and Salespage.",
   "author": {
     "name": "Convertly",
     "url": "https://convertly.my"
@@ -18,22 +18,27 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Convertly Agent Stack",
-    "shortDescription": "Build, test, and scale ads with Convertly Growth OS.",
-    "longDescription": "Uses the agent as the only Growth OS control surface: Convertly supplies analytics, memory and guarded scaling; Cloudinary stores approved assets; official Meta Ads MCP executes confirmed changes.",
+    "displayName": "Convertly Growth Operator",
+    "shortDescription": "Turn Convertly evidence into stronger ads.",
+    "longDescription": "Plan, create, test, publish, learn, and scale Meta ads from ChatGPT or Codex. Convertly supplies first-party salespage, TrueConvert, profit, attribution, Doctor, creative, experiment, and scaling context; native image generation creates the creative; Cloudinary stores approved assets; and the official Meta Ads MCP executes confirmed changes.",
     "developerName": "Convertly",
     "category": "Marketing",
     "capabilities": [
       "Read",
-      "Write"
+      "Write",
+      "Interactive"
     ],
     "defaultPrompt": [
-      "Analyze my funnel and draft a paused Meta campaign.",
-      "Create three ad angles from my top sales page.",
-      "Diagnose weak ads and propose the next controlled test.",
-      "Evaluate which campaign is safe to scale and show the approval packet."
+      "Audit my funnel and build the highest-leverage ad test.",
+      "Create a complete paused campaign from my best salespage.",
+      "Find what is safe to scale and show the approval packet."
     ],
-    "brandColor": "#635BFF"
+    "brandColor": "#635BFF",
+    "websiteURL": "https://convertly.my",
+    "privacyPolicyURL": "https://convertly.my/privacy",
+    "termsOfServiceURL": "https://convertly.my/terms",
+    "composerIcon": "./assets/convertly-icon.svg",
+    "logo": "./assets/convertly-logo.svg"
   },
   "mcpServers": "./.mcp.json"
 }

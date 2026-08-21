@@ -2,10 +2,7 @@
   "mcpServers": {
     "convertly": {
       "type": "http",
-      "url": "https://convertly.my/api/mcp",
-      "headers": {
-        "Authorization": "Bearer ${CONVERTLY_MCP_KEY}"
-      }
+      "url": "https://convertly.my/api/mcp"
     },
     "meta-ads": {
       "type": "http",

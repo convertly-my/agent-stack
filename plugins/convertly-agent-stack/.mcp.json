@@ -1,17 +1,21 @@
 {
   "mcpServers": {
     "convertly": {
+      "type": "http",
       "url": "https://convertly.my/api/mcp",
-      "bearer_token_env_var": "CONVERTLY_MCP_KEY",
-      "enabled": true
+      "auth": "oauth",
+      "enabled": true,
+      "default_tools_approval_mode": "writes"
     },
     "meta_ads": {
+      "type": "http",
       "url": "https://mcp.facebook.com/ads",
       "auth": "oauth",
       "enabled": true,
       "default_tools_approval_mode": "writes"
     },
     "cloudinary_assets": {
+      "type": "http",
       "url": "https://asset-management.mcp.cloudinary.com/mcp",
       "auth": "oauth",
       "enabled": true,
