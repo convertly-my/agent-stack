@@ -26,7 +26,7 @@ Use each system for its owned responsibility:
 7. Inspect the Meta account and existing objects before creating duplicates. Create new campaign objects in `PAUSED` or the closest non-delivering draft state whenever Meta supports it.
 8. Before any scaling, budget, pause, rollback, or activation decision, read [Scaling constitution](references/scaling-constitution.md). Convertly may recommend and store a proposal, but only the authorized Meta MCP executes it.
 9. Before any action that starts spend, raises budget, changes delivery, or publishes an active ad, show the exact account, objective, budget, schedule, targeting, destination, assets, and proposed action. Obtain explicit user confirmation immediately before the write.
-10. After an approved write, report the real IDs and statuses returned by Meta. Record the experiment or merchant feedback in Growth OS when the MCP key has `mcp:write`. Never claim that an object or asset exists without a successful tool result.
+10. After an approved write, report the real IDs and statuses returned by Meta. Record internal experiments or feedback with Convertly MCP when the key has `mcp:write`; approve internal drafts only after explicit merchant confirmation in the current conversation. Never claim that an object or asset exists without a successful tool result.
 
 ## Safety boundaries
 

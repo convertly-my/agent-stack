@@ -1,7 +1,7 @@
 {
   "name": "convertly-agent-stack",
-  "version": "0.2.0+codex.20260821072755",
-  "description": "Run a governed Growth OS for Meta campaigns using Convertly intelligence, experiments, creative memory, and scale readiness.",
+  "version": "0.3.0+codex.20260821081805",
+  "description": "Control a governed Meta Growth OS entirely from your agent using Convertly intelligence and official execution MCPs.",
   "author": {
     "name": "Convertly",
     "url": "https://convertly.my"
@@ -20,7 +20,7 @@
   "interface": {
     "displayName": "Convertly Agent Stack",
     "shortDescription": "Build, test, and scale ads with Convertly Growth OS.",
-    "longDescription": "Combines Convertly analytics, experiments, creative memory, guarded scaling, native image generation, Cloudinary assets, and official Meta Ads publishing in one governed workflow.",
+    "longDescription": "Uses the agent as the only Growth OS control surface: Convertly supplies analytics, memory and guarded scaling; Cloudinary stores approved assets; official Meta Ads MCP executes confirmed changes.",
     "developerName": "Convertly",
     "category": "Marketing",
     "capabilities": [
