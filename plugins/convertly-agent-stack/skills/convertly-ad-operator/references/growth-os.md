@@ -9,7 +9,7 @@ Use the narrowest Convertly tool that answers the question.
 | Choose creatives | `convertly_get_creative_intelligence`, then salespage context and approved evidence |
 | Plan a test | `convertly_get_growth_playbook`; store it with `convertly_record_campaign_hypothesis` and `convertly_create_growth_experiment` when available |
 | Consider scaling | `convertly_get_scale_readiness`; never infer scale readiness from Meta ROAS alone |
-| Remember feedback | `convertly_record_merchant_feedback` only after the merchant clearly states or approves the preference |
+| Remember feedback | `convertly_record_merchant_feedback` creates a draft after the merchant clearly states the preference; the merchant approves it in Growth OS |
 
 `mcp:write` is an internal Convertly memory scope. It can store hypotheses, experiments, and feedback. It cannot create Meta objects, upload Cloudinary assets, start spend, pause delivery, or change a budget.
 

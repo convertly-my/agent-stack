@@ -1,6 +1,6 @@
 {
   "name": "convertly-agent-stack",
-  "version": "0.2.0",
+  "version": "0.2.0+codex.20260821072755",
   "description": "Run a governed Growth OS for Meta campaigns using Convertly intelligence, experiments, creative memory, and scale readiness.",
   "author": {
     "name": "Convertly",
@@ -9,7 +9,13 @@
   "homepage": "https://convertly.my",
   "repository": "https://convertly.my/agent-stack.git",
   "license": "UNLICENSED",
-  "keywords": ["convertly", "meta-ads", "cloudinary", "advertising", "mcp"],
+  "keywords": [
+    "convertly",
+    "meta-ads",
+    "cloudinary",
+    "advertising",
+    "mcp"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Convertly Agent Stack",
@@ -17,7 +23,10 @@
     "longDescription": "Combines Convertly analytics, experiments, creative memory, guarded scaling, native image generation, Cloudinary assets, and official Meta Ads publishing in one governed workflow.",
     "developerName": "Convertly",
     "category": "Marketing",
-    "capabilities": ["Read", "Write"],
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
     "defaultPrompt": [
       "Analyze my funnel and draft a paused Meta campaign.",
       "Create three ad angles from my top sales page.",
