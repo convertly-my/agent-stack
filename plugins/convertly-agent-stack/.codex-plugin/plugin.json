@@ -1,6 +1,6 @@
 {
   "name": "convertly-agent-stack",
-  "version": "0.4.0",
+  "version": "0.4.1+codex.20260822084900",
   "description": "Connect ChatGPT or any MCP-compatible agent to TrueConvert and Salespage.",
   "author": {
     "name": "Convertly",
@@ -20,7 +20,7 @@
   "interface": {
     "displayName": "Convertly Growth Operator",
     "shortDescription": "Turn Convertly evidence into stronger ads.",
-    "longDescription": "Plan, create, test, publish, learn, and scale Meta ads from ChatGPT or Codex. Convertly supplies first-party salespage, TrueConvert, profit, attribution, Doctor, creative, experiment, and scaling context; native image generation creates the creative; Cloudinary stores approved assets; and the official Meta Ads MCP executes confirmed changes.",
+    "longDescription": "Plan, create, test, publish, learn, and scale Meta ads from ChatGPT or Codex. Convertly supplies first-party salespage, TrueConvert, profit, attribution, Doctor, creative, experiment, and scaling context; native image generation or user uploads supply the creative; optional Cloudinary bridges approved media when Meta needs a public URL; and the official Meta Ads MCP executes confirmed changes.",
     "developerName": "Convertly",
     "category": "Marketing",
     "capabilities": [

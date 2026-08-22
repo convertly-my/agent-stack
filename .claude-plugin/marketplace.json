@@ -5,14 +5,14 @@
     "url": "https://convertly.my"
   },
   "description": "Convertly plugins for planning, creating, storing, and publishing Meta ads.",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "plugins": [
     {
       "name": "convertly-agent-stack",
       "displayName": "Convertly Growth Operator",
       "source": "./plugins/convertly-agent-stack",
-      "description": "Turn Convertly evidence into stronger Meta ads with image generation, Cloudinary, and official publishing.",
-      "version": "0.4.0",
+      "description": "Turn Convertly evidence into stronger Meta ads with optional Cloudinary media bridging and official publishing.",
+      "version": "0.4.1",
       "author": {
         "name": "Convertly",
         "url": "https://convertly.my"

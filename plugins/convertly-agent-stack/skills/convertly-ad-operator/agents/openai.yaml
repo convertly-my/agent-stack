@@ -16,11 +16,5 @@ dependencies:
       description: "Official Meta Ads execution tools"
       transport: "streamable_http"
       url: "https://mcp.facebook.com/ads"
-    - type: "mcp"
-      value: "cloudinary_assets"
-      description: "Official Cloudinary asset management"
-      transport: "streamable_http"
-      url: "https://asset-management.mcp.cloudinary.com/mcp"
-
 policy:
   allow_implicit_invocation: true

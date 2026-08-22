@@ -54,7 +54,9 @@ For each selected angle, specify:
 - primary text, headline, description, and matching landing-page message;
 - the exact variable being tested and everything held constant.
 
-Use native image generation only after the concept is approved or the user explicitly requests generation. Inspect generated output for claim accuracy, legibility, product fidelity, and placement-safe composition before upload.
+Use native image generation only after the concept is approved or the user explicitly requests generation. A user-provided attachment is equally valid creative input. Inspect the final asset for claim accuracy, legibility, product fidelity, and placement-safe composition before publishing.
+
+Prefer direct media upload when the official Meta tool supports it. Cloudinary is optional and becomes the image bridge only when Meta needs a stable public URL: upload the approved asset, retain its secure URL and public ID, then pass that URL to Meta. If the bridge is unavailable, preserve the completed launch packet and ask for the Cloudinary connection instead of regenerating work.
 
 ## 6. Launch packet
 

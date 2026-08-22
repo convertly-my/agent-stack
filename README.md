@@ -6,13 +6,13 @@ Codex, Claude, and other MCP-compatible agents:
 | Layer | Responsibility |
 | --- | --- |
 | Convertly MCP | Salespage, TC, Untung, Daily, Doctor, Attribution, Growth OS memory, experiments, creative intelligence, and scale readiness |
-| Agent image generation | Create ad images when the current agent supports native image generation |
-| Cloudinary Asset Management MCP | Upload and manage approved media assets |
+| Native generation or user upload | Supply the approved creative from ChatGPT, Claude, or the merchant |
+| Cloudinary Asset Management MCP | Optional bridge that gives an approved creative a public URL when Meta requires one |
 | Official Meta Ads MCP | Inspect and create campaign, ad set, creative, and ad objects |
 
 The universal OpenAI plugin source is in `plugins/convertly-agent-stack`. It
 packages the orchestration skill, Convertly OAuth MCP, official Meta Ads MCP,
-and Cloudinary Asset Management MCP. The Claude Code compatibility manifest
+and optional Cloudinary Asset Management MCP. The Claude Code compatibility manifest
 shares the same orchestration skill.
 
 ## Install from ChatGPT Plugin Directory
@@ -22,7 +22,7 @@ After Convertly is approved in the public Plugin Directory:
 1. Open ChatGPT Desktop, then open Plugins.
 2. Search for `Convertly Growth Operator` and select Add.
 3. Sign in to Convertly, choose the store, and approve access.
-4. Authorize Meta Ads and Cloudinary when ChatGPT asks for them.
+4. Authorize Meta Ads. Connect Cloudinary only when you want fully automated image upload and Meta cannot accept the creative directly.
 5. Start with: `Audit my funnel and build the highest-leverage ad test. Do not publish yet.`
 
 No terminal or Convertly MCP key is required. Until the directory review is
@@ -56,8 +56,9 @@ codex plugin marketplace add https://convertly.my/agent-stack.git --sparse .agen
 codex plugin add convertly-agent-stack@convertly
 ```
 
-Restart Codex and approve the Convertly, Meta Ads, and Cloudinary OAuth
-connections. Start a new task so the installed skill and MCP tools are loaded.
+Restart Codex and approve the Convertly and Meta Ads OAuth connections. Enable
+Cloudinary only when the publishing route needs a public creative URL. Start a
+new task so the installed skill and MCP tools are loaded.
 
 ## Install in Claude Code
 
@@ -68,12 +69,13 @@ claude plugin marketplace add https://convertly.my/agent-stack.git --sparse .cla
 claude plugin install convertly-agent-stack@convertly
 ```
 
-Restart Claude Code, run `/mcp`, and approve the Convertly, Meta Ads, and
-Cloudinary OAuth connections. The orchestration skill is available as
+Restart Claude Code, run `/mcp`, and approve Convertly and Meta Ads. Cloudinary
+can remain disconnected until a creative must be uploaded to a public URL. The orchestration skill is available as
 `/convertly-agent-stack:convertly-ad-operator`.
 
 Cursor and generic MCP clients do not share the Codex/Claude plugin format. Use
-the manual three-server configuration shown in Convertly for those clients.
+the Convertly and Meta configuration shown in Convertly; add optional
+Cloudinary only for a publishing route that needs a public creative URL.
 
 ## First prompts
 
@@ -91,8 +93,21 @@ After setup, paste one of these into the agent chat:
 ChatGPT Desktop, Codex, Claude Desktop, and Claude Code authenticate through
 Convertly OAuth; they do not need an MCP key. The approved write scope only
 stores or approves internal Growth OS artifacts and guardrails and cannot
-publish or change Meta delivery. Meta Ads and Cloudinary use their own OAuth
-approval flows after the plugin is enabled.
+publish or change Meta delivery. Meta Ads uses its own OAuth approval flow.
+Cloudinary has a separate optional OAuth connection and is used only when the
+publishing route needs a public media URL.
+
+## Images from ChatGPT or Claude
+
+- ChatGPT may generate the creative natively. If the official Meta MCP accepts
+  that file directly, Cloudinary is skipped.
+- In Claude, the merchant can attach an existing image in chat. The agent uses
+  that approved attachment directly when Meta supports it.
+- When Meta requires a public image URL, the agent explains why Cloudinary is
+  needed, uploads the approved image there, receives a secure URL, and passes
+  that URL to the Meta MCP. This is what enables full image-to-ad automation.
+- Without Cloudinary, planning, copy, analysis, image review, campaign setup,
+  and any supported direct-upload route continue to work normally.
 
 Image generation is not represented as a fake remote MCP. Codex uses its native
 image-generation capability when available. An agent without image generation

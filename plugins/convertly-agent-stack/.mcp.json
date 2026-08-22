@@ -18,7 +18,7 @@
       "type": "http",
       "url": "https://asset-management.mcp.cloudinary.com/mcp",
       "auth": "oauth",
-      "enabled": true,
+      "enabled": false,
       "default_tools_approval_mode": "writes"
     }
   }
