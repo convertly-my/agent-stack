@@ -7,10 +7,6 @@
     "meta-ads": {
       "type": "http",
       "url": "https://mcp.facebook.com/ads"
-    },
-    "cloudinary-asset-mgmt": {
-      "type": "http",
-      "url": "https://asset-management.mcp.cloudinary.com/mcp"
     }
   }
 }
