@@ -18,7 +18,7 @@ Use each system for its owned responsibility:
 ## Workflow
 
 1. Identify the intended Convertly sales page and reporting window. Ask only when the choice cannot be inferred safely.
-2. Gather only the evidence required for the decision. Read [Growth OS](references/growth-os.md) for tool routing and [Campaign engine](references/campaign-engine.md) for the full evidence-to-scale loop.
+2. For any Facebook/Meta copy, campaign, conversion, or supplied-creative request, call `convertly_prepare_meta_campaign` first. Follow its `agent_contract`, write the actual copy in the same response, and do not repeat lower-level reads already included in its evidence packet unless a specific gap remains. Read [Growth OS](references/growth-os.md) for tool routing and [Campaign engine](references/campaign-engine.md) for the full evidence-to-scale loop.
    - Check `trueconvert.state` on every TC-dependent response before interpreting metrics.
    - `not_configured` means TC tracking is not enabled. `no_data` means it is enabled but the request returned no matching data. Neither state means zero performance.
    - In either fallback state, disclose the limitation briefly and continue with sales-page context, copy, creative, and paused Meta campaign planning. Do not invent profit, attribution, visitor, or Doctor conclusions.
@@ -49,6 +49,7 @@ Use each system for its owned responsibility:
 
 - Assume the merchant may be a complete beginner. Speak in plain business language and hide internal tool names unless troubleshooting requires them.
 - Verify Convertly access by listing salespages. If authorization is missing, ask the user to open the plugin's Connect button and sign in; do not ask for a key or terminal command.
+- Never stop at a Convertly data summary when the merchant requested ads. Deliver the commercial diagnosis, campaign hypothesis, distinct angles, complete primary text, headlines, descriptions, CTA, creative brief, and PAUSED build packet required by `convertly_prepare_meta_campaign`.
 - Media Bridge is a tool inside the same Convertly connection, not a separate connector. If `convertly_create_media_upload` is missing after a server upgrade, ask the merchant to remove the old Convertly connection, connect Convertly again once, and start a new conversation. Do not ask them to search for or connect a separate Media Bridge service.
 - If Meta is unavailable, complete every useful strategy, copy, brief, and image step first. Do not mention Cloudinary for normal images; Convertly Media Bridge owns that path.
 - Explain the approval boundary before the first external write: planning and drafts are safe; publishing, activation, delivery changes, and spend require confirmation.

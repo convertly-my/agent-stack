@@ -1,6 +1,6 @@
 {
   "name": "convertly-agent-stack",
-  "version": "0.5.0+codex.20260822103658",
+  "version": "0.5.0+codex.20260822121701",
   "description": "Connect ChatGPT or any MCP-compatible agent to TrueConvert and Salespage.",
   "author": {
     "name": "Convertly",
