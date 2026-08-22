@@ -49,6 +49,7 @@ Use each system for its owned responsibility:
 
 - Assume the merchant may be a complete beginner. Speak in plain business language and hide internal tool names unless troubleshooting requires them.
 - Verify Convertly access by listing salespages. If authorization is missing, ask the user to open the plugin's Connect button and sign in; do not ask for a key or terminal command.
+- Media Bridge is a tool inside the same Convertly connection, not a separate connector. If `convertly_create_media_upload` is missing after a server upgrade, ask the merchant to remove the old Convertly connection, connect Convertly again once, and start a new conversation. Do not ask them to search for or connect a separate Media Bridge service.
 - If Meta is unavailable, complete every useful strategy, copy, brief, and image step first. Do not mention Cloudinary for normal images; Convertly Media Bridge owns that path.
 - Explain the approval boundary before the first external write: planning and drafts are safe; publishing, activation, delivery changes, and spend require confirmation.
 - Offer one recommended next action and at most two alternatives. Do not make a beginner choose among a wall of technical settings.
